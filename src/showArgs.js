@@ -1,9 +1,14 @@
-let astre = process.argv[5]
-let nbr3 = process.argv[4]
-let nbr2 = process.argv[3]
-let nbr1 = process.argv[2]
-
-console.log(`${astre} ${nbr3} ${nbr2} ${nbr1}`)
+const showArgs = () => {
+    if (process.argv.length <= 2) {
+        console.log('error : not argument')
+        process.exit(1)
+    }
+    const inputs = process.argv.slice(2).reverse()
+    for (let i = 0; i < inputs.length; i += 1) {
+        console.log(inputs[i])
+    }
+}
+showArgs()
 
 // Enoncé
 /*
