@@ -33,18 +33,18 @@ const calc = (op, nb1, nb2) => {
     }
 }
 
-if (process.argv.length !== 3) {
+if (process.argv.length !== 5) {
     console.log('usage: node stars.js number')
     process.exit(1)
 }
 
 if (isNaN(process.argv[3])) {
-    console.log(`Error: ${process.argv[2]} is not a number.`)
+    console.log(`Error: ${process.argv[3]} is not a number.`)
     process.exit(1)
 }
 
 if (isNaN(process.argv[4])) {
-    console.log(`Error: ${process.argv[2]} is not a number.`)
+    console.log(`Error: ${process.argv[4]} is not a number.`)
     process.exit(1)
 }
 

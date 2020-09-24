@@ -1,12 +1,16 @@
-const isPalindrome = (el) => {
-    let rev = el.split('').reverse().join('')
-    return el === rev
-        ? `${process.argv[2]} is a palindrome`
-        : `${process.argv[2]} is not a palindrome`
-}
+const revert = (str) => str.split('').reverse().join('')
 
-let test = process.argv[2] // retruns true
-isPalindrome(test)
+if (process.argv.length !== 3) {
+    console.log('error: pas le bon nomber')
+    process.exit(1)
+}
+const pal = process.argv[2]
+
+if (pal === revert(pal)) {
+    console.log(`${pal} is a palindrome`)
+} else {
+    console.log(`${pal} is not a palindrome`)
+}
 
 // Enoncé
 /*
